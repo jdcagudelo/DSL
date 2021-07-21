@@ -1,0 +1,386 @@
+/**
+ */
+package sintaxisabstracta.util;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
+
+import sintaxisabstracta.Campo;
+import sintaxisabstracta.Cardinalidad;
+import sintaxisabstracta.Cero;
+import sintaxisabstracta.Ceromuchos;
+import sintaxisabstracta.Cerouno;
+import sintaxisabstracta.Date;
+import sintaxisabstracta.Muchos;
+import sintaxisabstracta.NewClass;
+import sintaxisabstracta.Numeric;
+import sintaxisabstracta.Relaciones;
+import sintaxisabstracta.SintaxisabstractaPackage;
+import sintaxisabstracta.Tabla;
+import sintaxisabstracta.Tipo_Dato;
+import sintaxisabstracta.Uno;
+import sintaxisabstracta.Unomuchos;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see sintaxisabstracta.SintaxisabstractaPackage
+ * @generated
+ */
+public class SintaxisabstractaAdapterFactory extends AdapterFactoryImpl {
+	/**
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static SintaxisabstractaPackage modelPackage;
+
+	/**
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SintaxisabstractaAdapterFactory() {
+		if (modelPackage == null) {
+			modelPackage = SintaxisabstractaPackage.eINSTANCE;
+		}
+	}
+
+	/**
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * <!-- end-user-doc -->
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
+	@Override
+	public boolean isFactoryForType(Object object) {
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
+
+	/**
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SintaxisabstractaSwitch<Adapter> modelSwitch =
+		new SintaxisabstractaSwitch<Adapter>() {
+			@Override
+			public Adapter caseTabla(Tabla object) {
+				return createTablaAdapter();
+			}
+			@Override
+			public Adapter caseCampo(Campo object) {
+				return createCampoAdapter();
+			}
+			@Override
+			public Adapter caseCardinalidad(Cardinalidad object) {
+				return createCardinalidadAdapter();
+			}
+			@Override
+			public Adapter caseTipo_Dato(Tipo_Dato object) {
+				return createTipo_DatoAdapter();
+			}
+			@Override
+			public Adapter caseString(sintaxisabstracta.String object) {
+				return createStringAdapter();
+			}
+			@Override
+			public Adapter caseNumeric(Numeric object) {
+				return createNumericAdapter();
+			}
+			@Override
+			public Adapter caseDate(Date object) {
+				return createDateAdapter();
+			}
+			@Override
+			public Adapter caseUno(Uno object) {
+				return createUnoAdapter();
+			}
+			@Override
+			public Adapter caseUnomuchos(Unomuchos object) {
+				return createUnomuchosAdapter();
+			}
+			@Override
+			public Adapter caseCero(Cero object) {
+				return createCeroAdapter();
+			}
+			@Override
+			public Adapter caseCeromuchos(Ceromuchos object) {
+				return createCeromuchosAdapter();
+			}
+			@Override
+			public Adapter caseMuchos(Muchos object) {
+				return createMuchosAdapter();
+			}
+			@Override
+			public Adapter caseCerouno(Cerouno object) {
+				return createCerounoAdapter();
+			}
+			@Override
+			public Adapter caseRelaciones(Relaciones object) {
+				return createRelacionesAdapter();
+			}
+			@Override
+			public Adapter caseNewClass(NewClass object) {
+				return createNewClassAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
+
+	/**
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
+	@Override
+	public Adapter createAdapter(Notifier target) {
+		return modelSwitch.doSwitch((EObject)target);
+	}
+
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Tabla <em>Tabla</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Tabla
+	 * @generated
+	 */
+	public Adapter createTablaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Campo <em>Campo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Campo
+	 * @generated
+	 */
+	public Adapter createCampoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Cardinalidad <em>Cardinalidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Cardinalidad
+	 * @generated
+	 */
+	public Adapter createCardinalidadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Tipo_Dato <em>Tipo Dato</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Tipo_Dato
+	 * @generated
+	 */
+	public Adapter createTipo_DatoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.String <em>String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.String
+	 * @generated
+	 */
+	public Adapter createStringAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Numeric <em>Numeric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Numeric
+	 * @generated
+	 */
+	public Adapter createNumericAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Date <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Date
+	 * @generated
+	 */
+	public Adapter createDateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Uno <em>Uno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Uno
+	 * @generated
+	 */
+	public Adapter createUnoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Unomuchos <em>Unomuchos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Unomuchos
+	 * @generated
+	 */
+	public Adapter createUnomuchosAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Cero <em>Cero</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Cero
+	 * @generated
+	 */
+	public Adapter createCeroAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Ceromuchos <em>Ceromuchos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Ceromuchos
+	 * @generated
+	 */
+	public Adapter createCeromuchosAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Muchos <em>Muchos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Muchos
+	 * @generated
+	 */
+	public Adapter createMuchosAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Cerouno <em>Cerouno</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Cerouno
+	 * @generated
+	 */
+	public Adapter createCerounoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.Relaciones <em>Relaciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.Relaciones
+	 * @generated
+	 */
+	public Adapter createRelacionesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sintaxisabstracta.NewClass <em>New Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sintaxisabstracta.NewClass
+	 * @generated
+	 */
+	public Adapter createNewClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @generated
+	 */
+	public Adapter createEObjectAdapter() {
+		return null;
+	}
+
+} //SintaxisabstractaAdapterFactory

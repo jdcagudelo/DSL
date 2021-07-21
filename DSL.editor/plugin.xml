@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Relaciones -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sintaxisabstracta.presentation.SintaxisabstractaModelWizardID"
+            name="%_UI_SintaxisabstractaModelWizard_label"
+            class="sintaxisabstracta.presentation.SintaxisabstractaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SintaxisabstractaModelFile.gif">
+         <description>%_UI_SintaxisabstractaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Relaciones -->
+      <editor
+            id="sintaxisabstracta.presentation.SintaxisabstractaEditorID"
+            name="%_UI_SintaxisabstractaEditor_label"
+            icon="icons/full/obj16/SintaxisabstractaModelFile.gif"
+            extensions="sintaxisabstracta"
+            class="sintaxisabstracta.presentation.SintaxisabstractaEditor"
+            contributorClass="sintaxisabstracta.presentation.SintaxisabstractaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Relaciones -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="relaciones.presentation.RelacionesModelWizardID"
+            name="%_UI_RelacionesModelWizard_label"
+            class="relaciones.presentation.RelacionesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RelacionesModelFile.gif">
+         <description>%_UI_RelacionesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Relaciones -->
+      <editor
+            id="relaciones.presentation.RelacionesEditorID"
+            name="%_UI_RelacionesEditor_label"
+            icon="icons/full/obj16/RelacionesModelFile.gif"
+            extensions="relaciones"
+            class="relaciones.presentation.RelacionesEditor"
+            contributorClass="relaciones.presentation.RelacionesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

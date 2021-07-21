@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Relaciones -->
+      <package
+            uri="http:///sintaxisabstracta.ecore"
+            class="sintaxisabstracta.SintaxisabstractaPackage"
+            genModel="model/Relaciones.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Relaciones -->
+      <package
+            uri="http:///relaciones.ecore"
+            class="relaciones.RelacionesPackage"
+            genModel="model/Relaciones.genmodel"/>
+   </extension>
+
+</plugin>
