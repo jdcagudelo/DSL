@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DSLV1/src" modelPluginID="DSLV1" modelName="Relaciones"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.rose"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>C:\Users\David\Desktop\Semestre 9\Software 3\Proyecto\Modelos\Relaciones.mdl</foreignModel>
+  <genPackages prefix="Sintaxisabstracta" disposableProviderFactory="true" ecorePackage="sintaxisabstracta.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sintaxisabstracta.ecore#//Cardinalidad">
+      <genEnumLiterals ecoreEnumLiteral="sintaxisabstracta.ecore#//Cardinalidad/MUCHOS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sintaxisabstracta.ecore#//Tipo_Dato">
+      <genEnumLiterals ecoreEnumLiteral="sintaxisabstracta.ecore#//Tipo_Dato/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="sintaxisabstracta.ecore#//Tipo_Dato/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="sintaxisabstracta.ecore#//Tipo_Dato/NUMERIC"/>
+    </genEnums>
+    <genClasses ecoreClass="sintaxisabstracta.ecore#//Tabla">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Tabla/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Tabla/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Tabla/theCampo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Tabla/thesintaxisAbstracta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Tabla/thecardinalidad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Tabla/relacionesA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Tabla/relacionesB"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Tabla/thesintaxisConcreta"/>
+    </genClasses>
+    <genClasses ecoreClass="sintaxisabstracta.ecore#//Campo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Campo/etiqueta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Campo/codigo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Campo/theTabla"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Campo/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="sintaxisabstracta.ecore#//Relacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/multiplicidadA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/multiplicidadB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/roleA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/roleB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Relacion/thesintaxisAbstracta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sintaxisabstracta.ecore#//Relacion/theCardinalidad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Relacion/sourceTabla"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sintaxisabstracta.ecore#//Relacion/targetTabla"/>
+    </genClasses>
+    <genClasses ecoreClass="sintaxisabstracta.ecore#//NewClass"/>
+  </genPackages>
+  <genPackages prefix="Sintaxisconcreta" disposableProviderFactory="true" ecorePackage="sintaxisconcreta.ecore#/"/>
+  <genPackages prefix="Relaciones" disposableProviderFactory="true" ecorePackage="relaciones.ecore#/">
+    <genClasses ecoreClass="relaciones.ecore#//ModelFactory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relaciones.ecore#//ModelFactory/thesintaxisAbstracta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relaciones.ecore#//ModelFactory/thesintaxisConcreta"/>
+    </genClasses>
+    <genClasses ecoreClass="relaciones.ecore#//SintaxisAbstracta">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisAbstracta/theModelFactory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisAbstracta/theTabla"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisAbstracta/SintaxisAbstracta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisAbstracta/ListaRelaciones"/>
+    </genClasses>
+    <genClasses ecoreClass="relaciones.ecore#//SintaxisConcreta">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisConcreta/theModelFactory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference relaciones.ecore#//SintaxisConcreta/theTabla"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

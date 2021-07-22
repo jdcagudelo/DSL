@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sintaxisabstracta" nsURI="http:///sintaxisabstracta.ecore" nsPrefix="sintaxisabstracta">
+  <eClassifiers xsi:type="ecore:EClass" name="Tabla">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theCampo" lowerBound="1"
+        upperBound="-1" eType="#//Campo" containment="true" eOpposite="#//Campo/theTabla"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thesintaxisAbstracta" eType="ecore:EClass relaciones.ecore#//SintaxisAbstracta"
+        transient="true" eOpposite="relaciones.ecore#//SintaxisAbstracta/theTabla"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="thecardinalidad" lowerBound="1"
+        eType="#//Cardinalidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesA" upperBound="-1"
+        eType="#//Relacion" eOpposite="#//Relacion/sourceTabla"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesB" upperBound="-1"
+        eType="#//Relacion" eOpposite="#//Relacion/targetTabla"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thesintaxisConcreta" eType="ecore:EClass relaciones.ecore#//SintaxisConcreta"
+        transient="true" eOpposite="relaciones.ecore#//SintaxisConcreta/theTabla"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Campo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etiqueta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codigo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theTabla" eType="#//Tabla"
+        transient="true" eOpposite="#//Tabla/theCampo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" lowerBound="1" eType="#//Tipo_Dato"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Cardinalidad">
+    <eLiterals name="MUCHOS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Tipo_Dato">
+    <eLiterals name="STRING"/>
+    <eLiterals name="DATE" value="1"/>
+    <eLiterals name="NUMERIC" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relacion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadA" eType="#//Cardinalidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadB" eType="#//Cardinalidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roleA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roleB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thesintaxisAbstracta" eType="ecore:EClass relaciones.ecore#//SintaxisAbstracta"
+        transient="true" eOpposite="relaciones.ecore#//SintaxisAbstracta/ListaRelaciones"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="theCardinalidad" lowerBound="1"
+        eType="#//Cardinalidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceTabla" lowerBound="1"
+        eType="#//Tabla" eOpposite="#//Tabla/relacionesA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetTabla" lowerBound="1"
+        eType="#//Tabla" eOpposite="#//Tabla/relacionesB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewClass"/>
+</ecore:EPackage>
