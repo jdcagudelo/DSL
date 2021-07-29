@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated modeloFinal -->
+      <package
+            uri="http:///sintaxisabstracta.ecore"
+            class="sintaxisabstracta.SintaxisabstractaPackage"
+            genModel="model/modeloFinal.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated modeloFinal -->
+      <package
+            uri="http:///modelofinal.ecore"
+            class="modelofinal.ModelofinalPackage"
+            genModel="model/modeloFinal.genmodel"/>
+   </extension>
+
+</plugin>

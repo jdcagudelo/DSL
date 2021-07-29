@@ -1,0 +1,29 @@
+{"Cliente":[
+		{"nombre":"juan",
+		"Apellido":"castaño",
+		"Telefono":"32145566",
+		"Articulo":"Cafe",
+		"Valor Unitario":"5000",
+		"Cantidad":"6",
+		"Valor total":"30000"
+	},
+	
+		{"nombre":"Leonardo",
+		"Apellido":"Herrera",
+		"Telefono":"3219865",
+		"Articulo":"Empanada",
+		"Valor Unitario":"2000",
+		"Cantidad":"4",
+		"Valor total":"8000"
+	},
+		{"nombre":"Alex",
+		"Apellido":"Neisa",
+		"Telefono":"320964333",
+		"Articulo":"Pastel",
+		"Valor Unitario":"4000",
+		"Cantidad":"5",
+		"Valor total":"20000"
+	}
+
+	]	
+}
